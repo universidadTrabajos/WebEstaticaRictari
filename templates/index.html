@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../static/styles.css">
     <script src="../static/app.js" defer></script>
     <title>Mi página web</title>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../static/images/logo.png" alt="RICTARI Logo" style="height: 100px;"> 
-            <!-- Ajusta la altura según sea necesario -->
+            <img src="../static/images/logo.png" alt="RICTARI Logo" style="height: 100px;">
         </div>
         <ul class="nav-links">
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#servicios">SERVICIOS</a></li>
-            <li><a href="#contacto">CONTACTANOS </a></li>
+            <li><a href="#contacto">CONTACTANOS</a></li>
             <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
             <li><a href="#redes">REDES SOCIALES</a></li>
             <li><a href="#valoresEmpresa">VALORES DE LA EMPRESA</a></li>
@@ -35,19 +37,27 @@
     </header>
 
     <main>
+        <section id="intro" class="intro-section">
+            <div class="content">
+                <h2>¡Solicita una consulta de fumigación!</h2>
+                <p>Estamos aquí para ayudarte a mantener tu negocio libre de plagas.</p>
+                <a href="#contacto" class="btn-primary">¡Contáctanos!</a>
+            </div>
+        </section>
+
         <section id="servicios" class="cards-container">
             <h2>Nuestros Servicios</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>Servicio 1</h3>
+                    <h3>Fumigación Residencial</h3>
                     <p>Descripción breve de este servicio.</p>
                 </div>
                 <div class="card">
-                    <h3>Servicio 2</h3>
+                    <h3>Fumigación Comercial</h3>
                     <p>Descripción breve de este servicio.</p>
                 </div>
                 <div class="card">
-                    <h3>Servicio 3</h3>
+                    <h3>Servicios Especializados</h3>
                     <p>Descripción breve de este servicio.</p>
                 </div>
             </div>
@@ -64,33 +74,49 @@
         </section>
 
         <div id="flash-messages" class="flash-messages"></div>
-        
+
         <section id="acerca" class="about-section">
             <h2>Acerca de Nosotros</h2>
-            <p>Somos una empresa dedicada a brindar las mejores soluciones para ti.</p>
+            <p>Somos una empresa dedicada a brindar las mejores soluciones de fumigación para ti.</p>
+        </section>
+
+        <section id="queSignifica" class="meaning-section">
+            <h2>¿Qué significa RICTARI?</h2>
+            <div class="meaning-container">
+            <img src="../static/images/maparictari.png" alt="Mapa RICTARI" class="map-image" style="margin-top: 2rem;">
         </section>
 
         <section id="redes" class="social-media-section">
             <h2>Redes Sociales</h2>
             <p>Conéctate con nosotros a través de nuestras redes sociales:</p>
             <ul>
-                <li><a href="https://wa.me/917859378" target="_blank">
-                    <img src="path/to/whatsapp-logo.png" alt="WhatsApp" width="30"> WhatsApp</a>
+                <li>
+                    <a href="https://wa.me/917859378" target="_blank">
+                        <span class="material-icons" style="vertical-align: middle;">chat</span>
+                        WhatsApp
+                    </a>
                 </li>
-                <li><a href="https://www.facebook.com/Rictarii" target="_blank">Facebook</a></li>
-                <li>Teléfono: <strong>TU_NUMERO_DE_TELEFONO</strong></li>
+                <li>
+                    <a href="https://www.facebook.com/Rictarii" target="_blank">
+                        <span class="material-icons" style="vertical-align: middle;">facebook</span>
+                        Facebook
+                    </a>
+                </li>
+                <li>Teléfono: <strong>+51 917 859 378</strong></li>
             </ul>
         </section>
 
         <section id="valoresEmpresa" class="company-values-section">
             <h2>Valores de la Empresa</h2>
             <ul>
+                <li>Actitud</li>
                 <li>Integridad</li>
-                <li>Innovación</li>
-                <li>Excelencia</li>
-                <li>Compromiso</li>
-                <li>Trabajo en equipo</li>
+                <li>Respeto</li>
+                <li>Trabajo</li>
+                <li>Progreso</li>
             </ul>
+            <h3>Despierta tus capacidades</h3>
+            <h3>Levanta tus habilidades</h3>
         </section>
     </main>
 
@@ -98,4 +124,5 @@
         <p>&copy; 2025. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

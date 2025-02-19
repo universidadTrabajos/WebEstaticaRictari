@@ -18,8 +18,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #007733; /* Color principal */
-    color: white;
+    background: white; /* Cambiado a blanco */
+    color: #333;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -28,7 +28,7 @@ body {
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333; /* Color ajustado */
 }
 
 .nav-links {
@@ -39,7 +39,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #333; /* Cambiado a gris oscuro */
     transition: color 0.3s;
 }
 
@@ -57,7 +57,41 @@ body {
 .burger span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: #333; /* Cambiar a gris oscuro */
+}
+
+/* Sección de Introducción */
+.intro-section {
+    background: url('../static/images/fondo.png') no-repeat center center/cover;
+    height: 80vh; /* Ajusta según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Cambia dependiendo de tus preferencias */
+    text-align: center;
+}
+
+.intro-section .content {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro más opaco para mejor legibilidad */
+    padding: 40px; /* Aumenta el padding para hacerlo más espacioso */
+    border-radius: 10px;
+    max-width: 800px; /* Limita el ancho para que no sea demasiado grande en pantallas grandes */
+    margin: 0 20px; /* Espaciado lateral */
+}
+
+.intro-section h2 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el encabezado */
+    margin-bottom: 1rem; /* Espaciado debajo del título */
+}
+
+.intro-section p {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el párrafo */
+    margin-bottom: 2rem; /* Espaciado debajo del párrafo */
+}
+
+.intro-section .btn-primary {
+    padding: 1rem 2rem; /* Aumenta el tamaño del botón */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente del botón */
 }
 
 /* página de bienvenida-Hero Section */
@@ -95,13 +129,13 @@ body {
 }
 
 .btn-primary:hover {
-    background: #a5b572; /* Un tono un poco más oscuro al hacer hover */
+    background: #a5b572; /* Un tono más oscuro al hacer hover */
 }
 
 /* sección de tarjetas */
 .cards-container {
     padding: 3rem;
-    background: #f9f9f9;
+    background: #f9f9f9; /* Color de fondo claro */
 }
 
 .cards-container h2 {
@@ -129,11 +163,6 @@ body {
 
 .card:hover {
     transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
 }
 
 .card h3 {
@@ -192,13 +221,13 @@ body {
 
 /* Animacion de carga. */
 #contact-form button.loading {
-    background-color: #ccc; 
-    cursor: not-allowed; 
+    background-color: #ccc;
+    cursor: not-allowed;
     position: relative;
 }
 
 #contact-form button.loading::after {
-    content: ''; 
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -247,9 +276,15 @@ body {
 
 /* Animación para desaparecer el mensaje */
 @keyframes fade-in-out {
-    0% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Sección acerca de nosotros */
@@ -329,7 +364,7 @@ body {
     margin: 0.5rem 0;
 }
 
-/* pie de página */
+/* Pie de página */
 footer {
     padding: 1.5rem;
     background: #007733; /* Color principal en el pie de página */
@@ -358,4 +393,31 @@ footer {
     .burger {
         display: flex;
     }
+}
+
+.meaning-section {
+    padding: 3rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.meaning-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.meaning-item {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+    background: white; /* Fondo blanco para cada elemento */
+    padding: 1rem;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}.map-image {
+    max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Centra la imagen */
+    margin: 0 auto; /* Centra horizontalmente */
 }
