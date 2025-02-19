@@ -62,13 +62,26 @@ body {
 
 /* Sección de Introducción */
 .intro-section {
-    background: url('../static/images/fondo.png') no-repeat center center/cover;
+    position: relative; /* Necesario para el efecto */
+    overflow: hidden; /* Mantener el contenido en su lugar */
     height: 80vh; /* Ajusta según sea necesario */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white; /* Cambia dependiendo de tus preferencias */
     text-align: center;
+}
+
+.intro-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../static/images/fondo.png') no-repeat center center/cover;
+    transform: translateZ(-1px) scale(1.1);
+    z-index: -1; /* Mantener la imagen detrás del contenido */
 }
 
 .intro-section .content {
@@ -118,18 +131,20 @@ body {
 }
 
 .btn-primary {
-    background: #c7d19f; /* Color secundario para los botones */
+    background: linear-gradient(to right, #c7d19f, #a5b572); /* Usar gradiente */
     color: #007733; /* Texto en verde oscuro */
     padding: 0.8rem 1.8rem;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Efecto de transición */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-    background: #a5b572; /* Un tono más oscuro al hacer hover */
+    background: linear-gradient(to right, #a5b572, #c7d19f); /* Cambiar el gradiente al hover */
+    transform: scale(1.1); /* Agrandar botón al hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra al hover */
 }
 
 /* sección de tarjetas */
@@ -154,15 +169,16 @@ body {
 .card {
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra profunda */
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Añadir sombra a la transición */
     color: black;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Difundir sombra al hover */
 }
 
 .card h3 {
@@ -175,7 +191,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Seccion de contacto */
+/* Sección de contacto */
 .contact-section {
     padding: 3rem;
     background: #007733; /* Color principal */
@@ -196,7 +212,8 @@ body {
     margin: 0 auto;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -204,7 +221,7 @@ body {
 }
 
 #contact-form button {
-    background: #c7d19f; /* Color secundario para el botón de envío */
+    background: linear-gradient(to right, #c7d19f, #a5b572); /* Gradiente secundario para el botón de envío */
     border: none;
     color: #007733; /* Texto en verde oscuro */
     padding: 1rem;
@@ -212,14 +229,15 @@ body {
     font-weight: bold;
     cursor: pointer;
     border-radius: 50px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s; /* Transición */
 }
 
 #contact-form button:hover {
     background: #a5b572; /* Tono oscuro al hacer hover */
+    transform: scale(1.1); /* Agrandar botón al hover */
 }
 
-/* Animacion de carga. */
+/* Animación de carga */
 #contact-form button.loading {
     background-color: #ccc;
     cursor: not-allowed;
@@ -258,12 +276,14 @@ body {
 }
 
 .alert {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 5s forwards; /* Cambiar a fadeInOut */
     padding: 10px 20px;
     border-radius: 5px;
     margin-bottom: 10px;
     color: white;
     font-size: 14px;
-    animation: fade-in-out 5s forwards;
 }
 
 .alert.success {
@@ -275,7 +295,7 @@ body {
 }
 
 /* Animación para desaparecer el mensaje */
-@keyframes fade-in-out {
+@keyframes fadeInOut {
     0% {
         opacity: 1;
     }
@@ -334,7 +354,7 @@ body {
 }
 
 .social-media-section a:hover {
-    background: #e0e0e0;
+    background: #e0e0e0; /* Cambiar a un gris claro al pasar el ratón */
 }
 
 .social-media-section img {
@@ -415,7 +435,9 @@ footer {
     padding: 1rem;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}.map-image {
+}
+
+.map-image {
     max-width: 100%; /* Asegura que la imagen no desborde su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Centra la imagen */
