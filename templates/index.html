@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/app.js" defer></script>
+    <title>Mi página web</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../static/images/logo.png" alt="RICTARI Logo" style="height: 100px;"> 
+            <!-- Ajusta la altura según sea necesario -->
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#contacto">CONTACTANOS </a></li>
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+            <li><a href="#redes">REDES SOCIALES</a></li>
+            <li><a href="#valoresEmpresa">VALORES DE LA EMPRESA</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <h1>Bienvenido a RICTARI</h1>
+        <p>Descubre nuestros servicios y más.</p>
+        <a href="#servicios" class="btn-primary">Descubrir Más</a>
+    </header>
+
+    <main>
+        <section id="servicios" class="cards-container">
+            <h2>Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Servicio 1</h3>
+                    <p>Descripción breve de este servicio.</p>
+                </div>
+                <div class="card">
+                    <h3>Servicio 2</h3>
+                    <p>Descripción breve de este servicio.</p>
+                </div>
+                <div class="card">
+                    <h3>Servicio 3</h3>
+                    <p>Descripción breve de este servicio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form id="contact-form" method="POST" action="/send_email">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <div id="flash-messages" class="flash-messages"></div>
+        
+        <section id="acerca" class="about-section">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos una empresa dedicada a brindar las mejores soluciones para ti.</p>
+        </section>
+
+        <section id="redes" class="social-media-section">
+            <h2>Redes Sociales</h2>
+            <p>Conéctate con nosotros a través de nuestras redes sociales:</p>
+            <ul>
+                <li><a href="https://wa.me/917859378" target="_blank">
+                    <img src="path/to/whatsapp-logo.png" alt="WhatsApp" width="30"> WhatsApp</a>
+                </li>
+                <li><a href="https://www.facebook.com/Rictarii" target="_blank">Facebook</a></li>
+                <li>Teléfono: <strong>TU_NUMERO_DE_TELEFONO</strong></li>
+            </ul>
+        </section>
+
+        <section id="valoresEmpresa" class="company-values-section">
+            <h2>Valores de la Empresa</h2>
+            <ul>
+                <li>Integridad</li>
+                <li>Innovación</li>
+                <li>Excelencia</li>
+                <li>Compromiso</li>
+                <li>Trabajo en equipo</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
