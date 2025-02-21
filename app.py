@@ -1,14 +1,16 @@
+
 from flask import Flask, render_template, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
 
+# Cargar variables de entorno desde .env
 load_dotenv()
 
 app = Flask(__name__)
-
 app.secret_key = os.getenv('FLASK_SECRET_KEY', '123')
 
+# Configuración de correo
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
@@ -18,10 +20,12 @@ app.config['MAIL_DEFAULT_SENDER'] = app.config['MAIL_USERNAME']
 
 mail = Mail(app)
 
+# Ruta para la página inicial
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# Ruta para enviar email
 @app.route('/send_email', methods=['POST'])
 def send_email():
     try:
