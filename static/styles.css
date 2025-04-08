@@ -11,6 +11,148 @@ body {
     color: #333;
     background: white;
 }
+/* carrusel */
+
+.empresas-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5px;
+}
+.empresas-container h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrusel-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    color: firebrick;
+    padding: 50px;
+
+}
+
+.carrusel {
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: green;
+    border-color: #007733;
+}
+
+h2.empresas {
+    font-size: 35px;
+    line-height: 30px;
+    padding-bottom: 50px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+}
+
+.carrusel-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.carrusel-track {
+    position: relative;
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    position: relative;
+    width: 100px;  /* Ajusta este tamaño según sea necesario */
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    height: 100%;
+}
+
+.carrusel-item h4 {
+    position: absolute;
+    z-index: 2;
+    font-size: 22px;
+    line-height: 23px;
+    color: blanchedalmond;
+    padding: 15px;
+}
+
+.carrusel-item h4 small {
+    font-size: 15px;
+    display: block;
+}
+
+.carrusel-item a img {
+    object-fit: cover;
+    height: 300px;
+    width: 200px; /* Ajustar el tamaño como se necesite */
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .carrusel-item {
+        width: 275px;
+    }
+
+    .carrusel-item a img {
+        width: 250px;
+    }
+}
+
+.carrusel-arrow {
+    border-radius: 50%;
+    background-color: #FFFFFF; /* Color de fondo */
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carrusel-arrow:focus {
+    outline: none;
+}
+
+.carrusel-arrow:hover {
+    background-color: #f0f0f0; /* Sombreado en hover */
+}
+
+.carrusel-arrow svg {
+    width: 20px; /* Ajuste de tamaño del icono */
+    height: auto;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel-prev {
+    left: 10px; /* Espaciado del borde izquierdo */
+}
+
+.carrusel-next {
+    right: 10px; /* Espaciado del borde derecho */
+}
 
 /* Navbar */
 .navbar {
